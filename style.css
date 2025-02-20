@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* cores */
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --DarkGrey: hsl(0, 0%, 12%);
+    --Black: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+
+    height: 100vh;
+    min-width:37.0rem;
+
+    background-color: var(--Black);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 38rem;
+    height: 61rem;
+    padding: 4rem;
+    border-radius: 1rem;
+
+    background-color: var(--DarkGrey);
+}
+
+.profile header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile header img {
+    width: 9rem;
+    border-radius: 50%;
+}
+
+.profile header > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    
+    color: var(--White);
+}
+
+.profile header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--Green);
+}
+
+.profile p {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+
+    color: var(--White);
+}
+
+.social-links {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.social-links nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.social-links ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    gap: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    
+    font-size: 1.4rem;
+    font-weight: 600;
+    
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 1rem;
+
+    color: var(--White);
+    background-color: var(--Grey);
+} 
+
+.social-links a:hover {
+    font-weight: 600;
+
+    color: var(--DarkGrey);
+    background-color: var(--Green);
+}
+
+.dev {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Green);
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 440px) {
+    main {
+        width: 33rem;
+        padding: 2.5rem;
+    }
+}
