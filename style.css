@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    /* cores */
     --Green: hsl(75, 94%, 57%);
     --White: hsl(0, 0%, 100%);
     --Grey: hsl(0, 0%, 20%);
@@ -14,9 +13,8 @@
 * {
     box-sizing: border-box;
     outline: none;
-
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -24,11 +22,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-
-    height: 100vh;
-    min-width:37.0rem;
-
+    min-height: 100vh;
     background-color: var(--Black);
+    padding: 1rem;
 }
 
 main {
@@ -36,68 +32,70 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 38rem;
-    height: 61rem;
-    padding: 4rem;
+    width: 90%;
+    max-height: 95vh;
+    padding: 1.5rem;
     border-radius: 1rem;
-
     background-color: var(--DarkGrey);
 }
 
-.profile header{
+.profile header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .profile header img {
-    width: 9rem;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .profile header > h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-top: 3rem;
-    
+    margin-top: 1rem;
     color: var(--White);
+    text-align: center;
 }
 
 .profile header h2 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: var(--Green);
+    text-align: center;
 }
 
 .profile p {
-    margin-top: 2.5rem;
-    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
     font-weight: normal;
-
     color: var(--White);
+    text-align: center;
 }
 
 .social-links {
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
 }
 
 .social-links nav {
     display: flex;
     flex-direction: column;
-
-    gap: 1.5rem;
+    gap: 0.8rem;
 }
 
 .social-links ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-
-    gap: 1.5rem;
+    gap: 0.8rem;
+    width: 100%;
 }
 
 .social-links a {
@@ -105,38 +103,111 @@ main {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-
-    
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    
     width: 100%;
-    height: 4.5rem;
-    border-radius: 1rem;
-
+    padding: 0.8rem;
+    border-radius: 0.5rem;
     color: var(--White);
     background-color: var(--Grey);
+    transition: all 0.3s ease;
 } 
 
 .social-links a:hover {
-    font-weight: 600;
-
     color: var(--DarkGrey);
     background-color: var(--Green);
+    transform: scale(1.02);
 }
 
 .dev {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--Green);
-    margin-top: 1rem;
-    padding: 1rem 0;
+    margin-top: 1.5rem;
 }
 
-@media screen and (max-width: 440px) {
+/* Tablets (481px - 768px) */
+@media screen and (min-width: 481px) {
     main {
-        width: 33rem;
-        padding: 2.5rem;
+        padding: 2rem;
+        max-width: 400px;
+    }
+
+    .profile header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile header > h1 {
+        font-size: 1.4rem;
+    }
+
+    .social-links a {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Notebooks (769px - 1024px) */
+@media screen and (min-width: 769px) {
+    main {
+        max-width: 450px;
+    }
+
+    .profile header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile header > h1 {
+        font-size: 1.6rem;
+    }
+
+    .social-links a {
+        padding: 1.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop (1025px - 1440px) */
+@media screen and (min-width: 1025px) {
+    main {
+        max-width: 500px;
+    }
+
+    .profile header img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile header > h1 {
+        font-size: 1.8rem;
+    }
+
+    .social-links a {
+        padding: 1.3rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* TV e Telas Grandes (> 1440px) */
+@media screen and (min-width: 1441px) {
+    main {
+        max-width: 600px;
+    }
+
+    .profile header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile header > h1 {
+        font-size: 2rem;
+    }
+
+    .social-links a {
+        padding: 1.5rem;
+        font-size: 1.3rem;
     }
 }
